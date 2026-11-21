@@ -1,0 +1,11 @@
+node_modules/
+dist/
+public/vditor/
+src-tauri/target/
+
+# 安装包放在 GitHub Releases 里，不进源码
+*.exe
+
+# 编译时生成
+src-tauri/gen/
+

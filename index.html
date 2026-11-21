@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mypora</title>
+    <link rel="stylesheet" href="/vditor/dist/index.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header id="bar">
+      <button data-act="new" title="新建窗口 (Ctrl+N)">新建</button>
+      <button data-act="open" title="打开 (Ctrl+O)">打开</button>
+      <button data-act="recent" title="最近打开的文件">最近 ▾</button>
+      <button data-act="save" title="保存 (Ctrl+S)">保存</button>
+      <button data-act="saveAs" title="另存为 (Ctrl+Shift+S)">另存为</button>
+      <button data-act="history" title="查看、恢复历史版本">历史</button>
+      <button data-act="autoSave" title="停止输入 2 秒后自动保存">自动保存：开</button>
+      <span id="filename"></span>
+    </header>
+    <div id="recent-menu" hidden></div>
+    <div id="main">
+      <aside id="sidebar">
+        <nav id="side-tabs">
+          <button data-tab="files">文件</button>
+          <button data-tab="outline">大纲</button>
+        </nav>
+        <section id="files-pane" class="side-pane">
+          <div id="tree"></div>
+        </section>
+        <section id="outline-pane" class="side-pane"></section>
+      </aside>
+      <div id="editor-col">
+        <main id="editor"></main>
+        <!-- 源码模式：左边纯文本编辑原始 Markdown，右边对比预览 -->
+        <div id="source-wrap" hidden>
+          <div id="source"></div>
+          <div id="source-preview"><div id="source-preview-body"></div></div>
+        </div>
+        <footer id="status">
+          <button data-act="sidebar" id="btn-sidebar" title="显示/隐藏侧边栏 (Ctrl+Shift+L)">
+            <svg viewBox="0 0 16 16"><path d="M10 3.5 5.5 8l4.5 4.5" /></svg>
+          </button>
+          <button data-act="mode" id="btn-mode" title="源码模式 (Ctrl+/)">
+            <svg viewBox="0 0 16 16"><path d="M5.5 4.5 2 8l3.5 3.5M10.5 4.5 14 8l-3.5 3.5M9 3.5 7 12.5" /></svg>
+          </button>
+          <span id="cursor-pos" hidden></span>
+          <span id="word-count"></span>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
