@@ -20,8 +20,9 @@
 ## 下载安装
 
 1. 打开 [Releases 页面](https://github.com/tongxt2644531/Mypora/releases/latest)，下载 `Mypora_x.x.x_x64-setup.exe`
-2. 双击安装（中文安装界面）
-3. 安装后可以把 `.md` 文件的默认打开方式设为 Mypora：右键 `.md` 文件 → 打开方式 → 选择 Mypora，勾选"始终使用"
+2. 因为没有证书下载后要点击保留，信任文件，才能打开
+3. 双击安装（中文安装界面）
+4. 安装后可以把 `.md` 文件的默认打开方式设为 Mypora：右键 `.md` 文件 → 打开方式 → 选择 Mypora，勾选"始终使用"
 
 系统要求：Windows 10 / 11（64 位）。Windows 11 自带运行需要的 WebView2；Windows 10 如果没有，安装程序会自动下载。
 
@@ -58,24 +59,6 @@ npm run tauri dev    # 开发运行
 npm run tauri build  # 打包，产物在 src-tauri/target/release/bundle/nsis/
 ```
 
-## 结构
-
-| 文件 | 内容 |
-|---|---|
-| `src/main.js` | 主流程：编辑器、文件操作、侧边栏、文件树、自动保存、外部修改检测 |
-| `src/source.js` | 源码模式（CodeMirror + 预览 + 同步滚动 + 源码大纲） |
-| `src/table.js` | 表格工具栏 |
-| `src/heading.js` | 标题保持静态、Ctrl+0～6 |
-| `src/slash.js` | `/` 快捷插入菜单 |
-| `src/find.js` | 渲染模式查找替换 |
-| `src/images.js` | 粘贴 / 拖入图片 |
-| `src/history.js` | 历史版本 |
-| `src/links.js` | 链接点击 |
-| `src/treemenu.js` | 文件树右键菜单 |
-| `src/style.css` | 全部样式 |
-| `src-tauri/src/lib.rs` | 读写文件、文件树、文件夹监听、单实例、多窗口 |
-| `src-tauri/src/files.rs` | 图片保存、历史版本、文件新建/重命名/删除 |
-| `src-tauri/tauri.conf.json` | 窗口、打包、.md 文件关联 |
 
 程序内部标识仍是 `com.local.mdeditor`，设置、历史版本和窗口位置都按它存放，改名不影响已有数据。
 
