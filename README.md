@@ -5,6 +5,9 @@
 <h1 align="center">Mypora</h1>
 
 <p align="center">
+  免费版typora，破解版typora，自己纯手搓复刻typora功能
+</p>
+<p align="center">
   轻量的本地 Markdown 编辑器，界面和操作仿 Typora。安装包约 7MB，完全离线。
 </p>
 
