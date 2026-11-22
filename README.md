@@ -86,3 +86,11 @@ npm run tauri build  # 打包，产物在 src-tauri/target/release/bundle/nsis/
 ## 许可证
 
 [Apache-2.0](LICENSE)
+
+## 欢迎打赏作者
+
+如果 Mypora 对你有帮助，欢迎请作者喝杯咖啡 ☕
+
+<p align="center">
+  <img src="docs/wechat-donate.jpg" width="240" alt="微信赞赏">
+</p>
